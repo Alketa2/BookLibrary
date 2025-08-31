@@ -1,34 +1,16 @@
-using System;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BookLibrary.Model
 {
     public class Cart
     {
-        [Key]
-        public Guid CartId { get; set; }
+        public int Id { get; set; }
 
-        [Required]
-        public int TotalItems { get; set; }
-
-        // [Required]
-        // public decimal CartTotal { get; set; }
+        [Required, MaxLength(128)]
+        public string UserId { get; set; } = null!;
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
-        // Foreign Keys
-        [Required]
-        public Guid UserId { get; set; }
-
-        [Required]
-        public Guid BookId { get; set; }
-
-        // Navigation Properties
-        [ForeignKey(nameof(UserId))]
-        public User? User { get; set; }
-
-        [ForeignKey(nameof(BookId))]
-        public Book? Book { get; set; }
+        public ICollection<CartItem> Items { get; set; } = new List<CartItem>();
     }
 }
