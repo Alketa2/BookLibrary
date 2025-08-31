@@ -1,14 +1,13 @@
-using System;
-using System;
 using System.ComponentModel.DataAnnotations;
-namespace BookLibrary.Model;
 
-public class Genre
+namespace BookLibrary.Model
 {
-     [Key]
-        public Guid GenreId { get; set; }
+    public class Genre
+    {
+        public int Id { get; set; }
 
-        [Required(ErrorMessage = "Genre is required")]
-        public string GenreName { get; set; }
-
+        [Required, MaxLength(100)]
+        public string Name { get; set; } = null!;
+        public ICollection<Book> Books { get; set; } = new List<Book>();
+    }
 }
