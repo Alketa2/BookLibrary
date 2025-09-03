@@ -1,0 +1,9 @@
+C:\Users\LENOVO\OneDrive\Desktop\BookLibrary\Backend\BookLibrary\BookLibrary\obj\Debug\net9.0\BookLibrary.csproj.AssemblyReference.cache
+C:\Users\LENOVO\OneDrive\Desktop\BookLibrary\Backend\BookLibrary\BookLibrary\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\LENOVO\OneDrive\Desktop\BookLibrary\Backend\BookLibrary\BookLibrary\obj\Debug\net9.0\BookLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\OneDrive\Desktop\BookLibrary\Backend\BookLibrary\BookLibrary\obj\Debug\net9.0\BookLibrary.AssemblyInfoInputs.cache
+C:\Users\LENOVO\OneDrive\Desktop\BookLibrary\Backend\BookLibrary\BookLibrary\obj\Debug\net9.0\BookLibrary.AssemblyInfo.cs
+C:\Users\LENOVO\OneDrive\Desktop\BookLibrary\Backend\BookLibrary\BookLibrary\obj\Debug\net9.0\BookLibrary.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\OneDrive\Desktop\BookLibrary\Backend\BookLibrary\BookLibrary\obj\Debug\net9.0\BookLibrary.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\LENOVO\OneDrive\Desktop\BookLibrary\Backend\BookLibrary\BookLibrary\obj\Debug\net9.0\BookLibrary.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\LENOVO\OneDrive\Desktop\BookLibrary\Backend\BookLibrary\BookLibrary\obj\Debug\net9.0\BookLibrary.sourcelink.json

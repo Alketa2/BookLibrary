@@ -1,19 +1,24 @@
 using Microsoft.EntityFrameworkCore;
-using MySql.EntityFrameworkCore.Extensions;
-using BookLibrary.Data; 
+using MySql.EntityFrameworkCore.Extensions; 
+using BookLibrary.Data;                     
+using BookLibrary.Services;                 
+using BookLibrary.Services.Email;           
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 var cs = builder.Configuration.GetConnectionString("Default");
 
-builder.Services.AddDbContext<BookLibraryDbContext>(options =>
-    options.UseMySQL(cs));
-builder.Services.AddControllers();
 
+builder.Services.AddDbContext<DatabaseConnection>(options =>
+    options.UseMySQL(cs));
+
+
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// CORS for React dev server (adjust port/origin as needed)
+
 builder.Services.AddCors(opt =>
 {
     opt.AddPolicy("frontend", p =>
@@ -21,6 +26,11 @@ builder.Services.AddCors(opt =>
          .AllowAnyHeader()
          .AllowAnyMethod());
 });
+
+
+builder.Services.AddScoped<JwtTokenService>();
+builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("SmtpSettings"));
+builder.Services.AddScoped<EmailService>();
 
 var app = builder.Build();
 
@@ -32,6 +42,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseCors("frontend");
+
+
 app.UseAuthorization();
+
 app.MapControllers();
 app.Run();
