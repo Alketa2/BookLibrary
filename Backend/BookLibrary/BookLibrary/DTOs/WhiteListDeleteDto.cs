@@ -1,4 +1,9 @@
-public class WhiteListDeleteDto
+using System;
+
+namespace BookLibrary.Dto
 {
-    public Guid BookId { get; set; }
+    public class WhiteListDeleteDto
+    {
+        public Guid BookId { get; set; }
+    }
 }
