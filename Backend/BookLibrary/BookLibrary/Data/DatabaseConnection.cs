@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using BookLibrary.Models; 
+using BookLibrary.Model;
 
 namespace BookLibrary.Data
 {
@@ -7,12 +7,18 @@ namespace BookLibrary.Data
     {
         public DatabaseConnection(DbContextOptions<DatabaseConnection> options) : base(options) { }
 
-        
-        public DbSet<User>? Users { get; set; }
-        public DbSet<Book>? Books { get; set; }
-        public DbSet<Order>? Orders { get; set; }
-        public DbSet<WhiteList>? WhiteLists { get; set; }
-        public DbSet<Staff>? Staffs { get; set; }
-        public DbSet<Category>? Categories { get; set; }
+        public DbSet<User> Users { get; set; } = default!;
+        public DbSet<Book> Books { get; set; } = default!;
+        public DbSet<Order> Orders { get; set; } = default!;
+        public DbSet<OrderItem> OrderItems { get; set; } = default!;
+        public DbSet<Review> Reviews { get; set; } = default!;
+        public DbSet<Category> Categories { get; set; } = default!;
+        public DbSet<Genre> Genres { get; set; } = default!;
+        public DbSet<Cart> Carts { get; set; } = default!;
+        public DbSet<CartItem> CartItems { get; set; } = default!;
+        public DbSet<WhiteList> WhiteLists { get; set; } = default!;
+        public DbSet<Notification> Notifications { get; set; } = default!; // e re
+
+    }
     }
 }
