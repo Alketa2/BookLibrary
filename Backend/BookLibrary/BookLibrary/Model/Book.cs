@@ -1,37 +1,41 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace BookLibrary.Model
 {
     public class Book
     {
-        public int Id { get; set; }
+        [Key]
+        public Guid Id { get; set; } = Guid.NewGuid();   
 
-        [Required, MaxLength(200)]
-        public string Title { get; set; } = null!;
+        [Required, StringLength(200)]
+        public string Title { get; set; } = string.Empty;
 
-        [Required, MaxLength(150)]
-        public string Author { get; set; } = null!;
-
-        [MaxLength(20)]
-        public string? ISBN { get; set; } 
-
-        public int? PublishedYear { get; set; }
-
-        public decimal? Price { get; set; } // decimal(10,2)
-
-        public int Stock { get; set; } = 0;
-
- 
-        public int? GenreId { get; set; }
+        // lidhje me Genre:
+        public Guid? GenreId { get; set; }               
         public Genre? Genre { get; set; }
 
-     
+        // lidhja me kategori 
         public ICollection<Category> Categories { get; set; } = new List<Category>();
 
-        // for carts 
-        public ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
+       
+        public decimal Price { get; set; }
+        public bool IsOnSale { get; set; }
+        public decimal? DiscountPercentage { get; set; }
+        public DateTime? DiscountStartDate { get; set; }
+        public DateTime? DiscountEndDate { get; set; }
 
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-        public DateTime? UpdatedAt { get; set; }
+        public decimal GetCurrentPrice()
+        {
+            if (IsOnSale && DiscountPercentage.HasValue &&
+                (!DiscountStartDate.HasValue || DiscountStartDate.Value <= DateTime.UtcNow) &&
+                (!DiscountEndDate.HasValue || DiscountEndDate.Value >= DateTime.UtcNow))
+            {
+                var pct = Math.Clamp((decimal)DiscountPercentage.Value, 0m, 100m);
+                return Math.Round(Price * (1 - pct / 100m), 2);
+            }
+            return Price;
+        }
     }
 }
