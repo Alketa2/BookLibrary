@@ -82,6 +82,24 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
+// Apply migrations & seed minimal data
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.Migrate();
+
+    if (!db.Books.Any())
+    {
+        db.Books.AddRange(new[] {
+            new LabCourse1.Core.Entities.Book { Title="Clean Code", Author="Robert C. Martin", Isbn="9780132350884", Price=29.99m, Stock=10, PublishedOn=new DateTime(2008,8,1) },
+            new LabCourse1.Core.Entities.Book { Title="The Pragmatic Programmer", Author="Andrew Hunt", Isbn="9780201616224", Price=31.50m, Stock=8, PublishedOn=new DateTime(1999,10,30) },
+            new LabCourse1.Core.Entities.Book { Title="Design Patterns", Author="GoF", Isbn="9780201633610", Price=39.00m, Stock=5, PublishedOn=new DateTime(1994,10,21) },
+        });
+        db.SaveChanges();
+    }
+}
+
 app.MapControllers();
 
 app.Run();

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LabCourse1.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5866e361974ac77152b726220df02c8f38b5cec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("LabCourse1.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LabCourse1.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -12,6 +12,7 @@ public class AppDbContext : DbContext
     public DbSet<Book> Books => Set<Book>();
     public DbSet<Order> Orders => Set<Order>();
     public DbSet<OrderItem> OrderItems => Set<OrderItem>();
+    public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
 
     protected override void OnModelCreating(ModelBuilder b)
     {
@@ -30,6 +31,11 @@ public class AppDbContext : DbContext
             .HasOne(oi => oi.Order)
             .WithMany(o => o.Items)
             .HasForeignKey(oi => oi.OrderId);
+
+        b.Entity<RefreshToken>()
+            .HasOne(rt => rt.User)
+            .WithMany()
+            .HasForeignKey(rt => rt.UserId);
 
         // Seed minimal data for testing
         b.Entity<Book>().HasData(
