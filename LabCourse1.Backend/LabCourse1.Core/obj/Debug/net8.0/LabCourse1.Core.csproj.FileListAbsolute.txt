@@ -20,3 +20,15 @@ C:\Users\LENOVO\OneDrive\Desktop\LabCourse1_FRONTEND_HARD_FIX\LabCourse1.Backend
 C:\Users\LENOVO\OneDrive\Desktop\LabCourse1_FRONTEND_HARD_FIX\LabCourse1.Backend\LabCourse1.Core\obj\Debug\net8.0\refint\LabCourse1.Core.dll
 C:\Users\LENOVO\OneDrive\Desktop\LabCourse1_FRONTEND_HARD_FIX\LabCourse1.Backend\LabCourse1.Core\obj\Debug\net8.0\LabCourse1.Core.pdb
 C:\Users\LENOVO\OneDrive\Desktop\LabCourse1_FRONTEND_HARD_FIX\LabCourse1.Backend\LabCourse1.Core\obj\Debug\net8.0\ref\LabCourse1.Core.dll
+C:\Users\LENOVO\OneDrive\Desktop\BookLibrary\LabCourse1.Backend\LabCourse1.Core\bin\Debug\net8.0\LabCourse1.Core.deps.json
+C:\Users\LENOVO\OneDrive\Desktop\BookLibrary\LabCourse1.Backend\LabCourse1.Core\bin\Debug\net8.0\LabCourse1.Core.dll
+C:\Users\LENOVO\OneDrive\Desktop\BookLibrary\LabCourse1.Backend\LabCourse1.Core\bin\Debug\net8.0\LabCourse1.Core.pdb
+C:\Users\LENOVO\OneDrive\Desktop\BookLibrary\LabCourse1.Backend\LabCourse1.Core\obj\Debug\net8.0\LabCourse1.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\OneDrive\Desktop\BookLibrary\LabCourse1.Backend\LabCourse1.Core\obj\Debug\net8.0\LabCourse1.Core.AssemblyInfoInputs.cache
+C:\Users\LENOVO\OneDrive\Desktop\BookLibrary\LabCourse1.Backend\LabCourse1.Core\obj\Debug\net8.0\LabCourse1.Core.AssemblyInfo.cs
+C:\Users\LENOVO\OneDrive\Desktop\BookLibrary\LabCourse1.Backend\LabCourse1.Core\obj\Debug\net8.0\LabCourse1.Core.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\OneDrive\Desktop\BookLibrary\LabCourse1.Backend\LabCourse1.Core\obj\Debug\net8.0\LabCourse1.Core.sourcelink.json
+C:\Users\LENOVO\OneDrive\Desktop\BookLibrary\LabCourse1.Backend\LabCourse1.Core\obj\Debug\net8.0\LabCourse1.Core.dll
+C:\Users\LENOVO\OneDrive\Desktop\BookLibrary\LabCourse1.Backend\LabCourse1.Core\obj\Debug\net8.0\refint\LabCourse1.Core.dll
+C:\Users\LENOVO\OneDrive\Desktop\BookLibrary\LabCourse1.Backend\LabCourse1.Core\obj\Debug\net8.0\LabCourse1.Core.pdb
+C:\Users\LENOVO\OneDrive\Desktop\BookLibrary\LabCourse1.Backend\LabCourse1.Core\obj\Debug\net8.0\ref\LabCourse1.Core.dll

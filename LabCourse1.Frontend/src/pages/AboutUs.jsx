@@ -13,7 +13,7 @@ export default function About() {
 
         <div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            About <span className="text-red-600">PerchaT</span>
+            About <span className="text-red-600">LibraSpace</span>
           </h1>
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
             LibraSpace is more than just a bookstore — we’re a community of readers, dreamers,
@@ -23,7 +23,7 @@ export default function About() {
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
             From rare classics to fresh releases, our goal is to connect people with books
             they’ll treasure for life. Whether you join us online or visit one of our events,
-            you’re part of the PerchaT family.
+            you’re part of the LibraSpace family.
           </p>
           <button className="px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">
             Learn More
