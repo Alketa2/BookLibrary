@@ -68,7 +68,7 @@ export default function Dashboard(){
                   <td className="p-3">{b.title}</td>
                   <td className="p-3">{b.author}</td>
                   <td className="p-3">{b.isbn}</td>
-                  <td className="p-3">{b.price?.toFixed ? b.price.toFixed(2) : b.price}</td>
+                  <td className="p-3">{b.price?.toFixeded ? b.price.toFixeded(2) : b.price}</td>
                   <td className="p-3">{b.stock}</td>
                 </tr>
               ))}
@@ -93,7 +93,7 @@ export default function Dashboard(){
                 <tr key={o.id} className="border-t align-top">
                   <td className="p-3">{o.id}</td>
                   <td className="p-3">{new Date(o.createdAt).toLocaleString()}</td>
-                  <td className="p-3">{o.total?.toFixed ? o.total.toFixed(2) : o.total}</td>
+                  <td className="p-3">{o.total?.toFixeded ? o.total.toFixeded(2) : o.total}</td>
                   <td className="p-3">{o.user?.fullName} ({o.user?.email})</td>
                   <td className="p-3">
                     {o.items?.map(it => (

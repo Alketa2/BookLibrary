@@ -50,7 +50,10 @@ public class AdminController : ControllerBase
             .Include(o => o.Items).ThenInclude(i => i.Book)
             .OrderByDescending(o => o.Id)
             .Select(o => new { 
-                o.Id, o.CreatedAt, o.Total,
+                o.Id, o.CreatedAt, o.Subtotal, o.ShippingCost, o.Total,
+                o.FirstName, o.LastName, o.Phone, o.Address, o.City, o.PostalCode,
+                PaymentMethod = o.PaymentMethod.ToString(),
+                ShippingMethod = o.ShippingMethod.ToString(),
                 User = new { o.User!.Id, o.User.FullName, o.User.Email },
                 Items = o.Items.Select(i => new { i.Id, Book = new { i.BookId, i.Book!.Title }, i.Quantity, i.UnitPrice })
             })

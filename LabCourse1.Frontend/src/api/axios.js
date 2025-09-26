@@ -1,8 +1,15 @@
 // src/api/axios.js
 import axios from "axios"
 
+function computeBaseUrl() {
+  const raw = import.meta.env.VITE_API_URL
+  if (!raw) return "/api"
+  const trimmed = String(raw).replace(/\/+$/, "")
+  return /\/api\/?$/.test(trimmed) ? trimmed : trimmed + "/api"
+}
+
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "/api",
+  baseURL: computeBaseUrl(),
   headers: { "Content-Type": "application/json" },
 })
 
@@ -14,15 +21,12 @@ api.interceptors.request.use((cfg) => {
 
 function extractMessage(err) {
   const r = err?.response
-  const d = r?.data
-  // Common ASP.NET cases:
-  if (typeof d === "string") return d
-  if (d?.message) return d.message
-  if (d?.error) return d.error
-  if (d?.title) return d.title
-  if (d?.errors) {
-    // ModelState { field: [ "msg1", "msg2" ] }
-    const first = Object.values(d.errors)?.[0]
+  if (r?.data) {
+    if (typeof r.data === "string") return r.data
+    if (r.data?.message) return r.data.message
+    const first = Array.isArray(r.data?.errors)
+      ? r.data.errors
+      : (r.data?.errors && Object.values(r.data.errors)[0])
     if (Array.isArray(first) && first.length) return first[0]
   }
   return err?.message || "Unexpected error"

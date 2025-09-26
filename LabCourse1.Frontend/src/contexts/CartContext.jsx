@@ -1,9 +1,24 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react'
 
 const CartContext = createContext()
 
+const STORAGE_KEY = 'cart'
+
 export function CartProvider({ children }) {
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useState(() => {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY)
+      return raw ? JSON.parse(raw) : []
+    } catch {
+      return []
+    }
+  })
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(cart))
+    } catch {}
+  }, [cart])
 
   const addToCart = (book) => {
     setCart(prev => {
@@ -13,7 +28,7 @@ export function CartProvider({ children }) {
           item.id === book.id ? { ...item, qty: item.qty + 1 } : item
         )
       }
-      return [...prev, { ...book, qty: 1 }]
+      return [...prev, { id: book.id, title: book.title, author: book.author, price: book.price, qty: 1 }]
     })
   }
 
@@ -21,8 +36,10 @@ export function CartProvider({ children }) {
     setCart(prev => prev.filter(item => item.id !== id))
   }
 
+  const clearCart = () => setCart([])
+
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart }}>
       {children}
     </CartContext.Provider>
   )

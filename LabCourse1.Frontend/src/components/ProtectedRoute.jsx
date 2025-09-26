@@ -8,5 +8,11 @@ export default function ProtectedRoute({ children, adminOnly = false }) {
 
   if (!user) return <Navigate to="/login" replace />
 
+  
+  // If this route requires admin and the user is not admin, redirect home
+  const roleVal = (user?.role ?? user?.Role ?? '').toString()
+  const isAdmin = roleVal === '1' || roleVal.toLowerCase() === 'admin'
+  if (adminOnly && !isAdmin) return <Navigate to="/" replace />
+
   return children
 }

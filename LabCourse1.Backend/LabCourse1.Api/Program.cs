@@ -1,4 +1,4 @@
-using LabCourse1.Infrastructure.Data;
+﻿using LabCourse1.Infrastructure.Data;
 using LabCourse1.Infrastructure.Repositories;
 using LabCourse1.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -9,8 +9,15 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Controllers
-builder.Services.AddControllers();
+// Controllers (JSON case-insensitive → binden fushat nga frontend pa probleme)
+builder.Services
+    .AddControllers()
+    .AddJsonOptions(o =>
+    {
+        o.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
+        // (opsionale) lëre naming-policy default; nuk e ndryshojmë për të mos prekur response
+        // o.JsonSerializerOptions.PropertyNamingPolicy = null;
+    });
 
 // EF Core SQL Server
 builder.Services.AddDbContext<AppDbContext>(opt =>
@@ -23,11 +30,12 @@ builder.Services.AddScoped<JwtTokenService>();
 // CORS
 builder.Services.AddCors(opt => opt.AddPolicy("frontend", p =>
     p.AllowAnyHeader().AllowAnyMethod().WithOrigins(
-        "http://localhost:5173","http://localhost:3000")));
+        "http://localhost:5173", "http://localhost:3000")));
 
 // JWT
 var jwtKey = builder.Configuration["Jwt:Key"];
 if (string.IsNullOrWhiteSpace(jwtKey)) throw new Exception("Jwt:Key is missing.");
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(o =>
     {
@@ -65,25 +73,7 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-// Migrate/ensure DB
-using (var scope = app.Services.CreateScope())
-{
-    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    db.Database.Migrate();
-}
-
-app.UseCors("frontend");
-app.UseAuthentication();
-app.UseAuthorization();
-
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-
-// Apply migrations & seed minimal data
+// Migrate/ensure DB + seed minimal data (1 herë mjafton)
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
@@ -98,6 +88,16 @@ using (var scope = app.Services.CreateScope())
         });
         db.SaveChanges();
     }
+}
+
+app.UseCors("frontend");
+app.UseAuthentication();
+app.UseAuthorization();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.MapControllers();

@@ -9,6 +9,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
 import Cart from './pages/Cart'
+import Checkout from './pages/Checkout'
 import NotFound from './pages/NotFound'
 import ProtectedRoute from './components/ProtectedRoute'
 import Events from './pages/Events'
@@ -20,6 +21,7 @@ import Returns from './pages/Returns'
 import Support from './pages/Support'
 import AboutUs from './pages/AboutUs'
 import Blog from './pages/Blog'
+
 
 
 export default function App(){
@@ -39,12 +41,13 @@ export default function App(){
         <Route path="/support" element={<Support/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register/>} />
-        <Route path="/dashboard" element={<ProtectedRoute><Dashboard/></ProtectedRoute>} />
+        <Route path="/dashboard" element={<ProtectedRoute adminOnly={true}><Dashboard/></ProtectedRoute>} />
         <Route path="/cart" element={<Cart/>} />
         <Route path="*" element={<NotFound/>} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/blog" element={<Blog />} />
 
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
       <Footer/>
     </>
