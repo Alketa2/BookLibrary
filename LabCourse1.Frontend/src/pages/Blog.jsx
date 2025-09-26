@@ -4,19 +4,19 @@ export default function Blog() {
       id: 1,
       title: "5 Must-Read Books This Fall",
       excerpt: "Discover our staff picks for the season — from thrillers to inspiring memoirs.",
-      image: "/images/blog-fall.jpg"
+      image: "/images/foto1.jpg"
     },
     {
       id: 2,
       title: "Author Spotlight: Jane Doe",
       excerpt: "Get to know the writer behind this year’s bestseller and her creative journey.",
-      image: "/images/blog-author.jpg"
+      image: "/images/foto2.jpg"
     },
     {
       id: 3,
       title: "How to Build a Reading Habit",
       excerpt: "Practical tips for making books a joyful part of your daily routine.",
-      image: "/images/blog-reading.jpg"
+      image: "/images/foto3.jpg"
     }
   ]
 

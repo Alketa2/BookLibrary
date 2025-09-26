@@ -1,11 +1,15 @@
+import { useNavigate } from "react-router-dom";
+
 export default function About() {
+  const navigate = useNavigate();
+
   return (
     <section className="bg-gray-50 py-20">
       <div className="container-wide grid md:grid-cols-2 gap-12 items-center">
         
         <div>
           <img
-            src="/images/about-libraspace.jpg" 
+            src="/images/booksbackground.jpg" 
             alt="About LibraSpace"
             className="rounded-xl shadow-lg transform hover:scale-105 transition duration-500"
           />
@@ -25,11 +29,14 @@ export default function About() {
             they’ll treasure for life. Whether you join us online or visit one of our events,
             you’re part of the LibraSpace family.
           </p>
-          <button className="px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">
+          <button
+            onClick={() => navigate("/")}
+            className="px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition"
+          >
             Learn More
           </button>
         </div>
       </div>
     </section>
-  )
+  );
 }

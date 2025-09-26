@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import BookCard from '../components/BookCard'
 
-// 30 librat e kategorive (të ndarë në 5 seksione x6)
+
 const categories = {
   Romance: [
     { id: 1, title: "Pride and Prejudice", author: "Jane Austen", price: 12.99 },
@@ -46,7 +46,7 @@ const categories = {
 }
 
 export default function Books() {
-  // refs për slider për çdo kategori
+  
   const refs = Object.keys(categories).reduce((acc, key) => {
     acc[key] = useRef(null)
     return acc

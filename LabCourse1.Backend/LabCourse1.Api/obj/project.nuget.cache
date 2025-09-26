@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U8/PaVMQr00=",
+  "dgSpecHash": "DgIaPrucWag=",
   "success": true,
-  "projectFilePath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\B-L-CHECKOUT_FIXED\\BookLibrary-Checkout-FIXED-FULL\\LabCourse1.Backend\\LabCourse1.Api\\LabCourse1.Api.csproj",
+  "projectFilePath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Api\\LabCourse1.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
