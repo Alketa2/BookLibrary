@@ -61,4 +61,41 @@ public class AdminController : ControllerBase
         return Ok(orders);
     }
 
+
+    public class UserUpdateDto
+    {
+        public string? FullName { get; set; }
+        public string? Email { get; set; }
+        public string? Role { get; set; } // "Admin" | "Librarian" | "User"
+    }
+
+    [HttpPut("users/{id:int}")]
+    public async Task<IActionResult> UpdateUser(int id, [FromBody] UserUpdateDto dto)
+    {
+        var user = await _db.Users.FirstOrDefaultAsync(u => u.Id == id);
+        if (user is null) return NotFound();
+
+        if (!string.IsNullOrWhiteSpace(dto.FullName)) user.FullName = dto.FullName!.Trim();
+        if (!string.IsNullOrWhiteSpace(dto.Email)) user.Email = dto.Email!.Trim();
+
+        if (!string.IsNullOrWhiteSpace(dto.Role))
+        {
+            if (Enum.TryParse<LabCourse1.Core.Entities.Role>(dto.Role, true, out var parsed))
+                user.Role = parsed;
+        }
+
+        await _db.SaveChangesAsync();
+        return NoContent();
+    }
+
+    [HttpDelete("users/{id:int}")]
+    public async Task<IActionResult> DeleteUser(int id)
+    {
+        var user = await _db.Users.FirstOrDefaultAsync(u => u.Id == id);
+        if (user is null) return NotFound();
+        _db.Users.Remove(user);
+        await _db.SaveChangesAsync();
+        return NoContent();
+    }
+
 }

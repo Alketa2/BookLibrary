@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Api\\LabCourse1.Api.csproj": {}
+    "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary_admin_edit_delete_patched_v2\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Api\\LabCourse1.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Api\\LabCourse1.Api.csproj": {
+    "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary_admin_edit_delete_patched_v2\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Api\\LabCourse1.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Api\\LabCourse1.Api.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary_admin_edit_delete_patched_v2\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Api\\LabCourse1.Api.csproj",
         "projectName": "LabCourse1.Api",
-        "projectPath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Api\\LabCourse1.Api.csproj",
+        "projectPath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary_admin_edit_delete_patched_v2\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Api\\LabCourse1.Api.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Api\\obj\\",
+        "outputPath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary_admin_edit_delete_patched_v2\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,11 +33,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Core\\LabCourse1.Core.csproj": {
-                "projectPath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Core\\LabCourse1.Core.csproj"
+              "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary_admin_edit_delete_patched_v2\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Core\\LabCourse1.Core.csproj": {
+                "projectPath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary_admin_edit_delete_patched_v2\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Core\\LabCourse1.Core.csproj"
               },
-              "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Infrastructure\\LabCourse1.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Infrastructure\\LabCourse1.Infrastructure.csproj"
+              "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary_admin_edit_delete_patched_v2\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Infrastructure\\LabCourse1.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary_admin_edit_delete_patched_v2\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Infrastructure\\LabCourse1.Infrastructure.csproj"
               }
             }
           }
@@ -96,14 +96,14 @@
         }
       }
     },
-    "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Core\\LabCourse1.Core.csproj": {
+    "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary_admin_edit_delete_patched_v2\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Core\\LabCourse1.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Core\\LabCourse1.Core.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary_admin_edit_delete_patched_v2\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Core\\LabCourse1.Core.csproj",
         "projectName": "LabCourse1.Core",
-        "projectPath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Core\\LabCourse1.Core.csproj",
+        "projectPath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary_admin_edit_delete_patched_v2\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Core\\LabCourse1.Core.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Core\\obj\\",
+        "outputPath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary_admin_edit_delete_patched_v2\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -162,14 +162,14 @@
         }
       }
     },
-    "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Infrastructure\\LabCourse1.Infrastructure.csproj": {
+    "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary_admin_edit_delete_patched_v2\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Infrastructure\\LabCourse1.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Infrastructure\\LabCourse1.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary_admin_edit_delete_patched_v2\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Infrastructure\\LabCourse1.Infrastructure.csproj",
         "projectName": "LabCourse1.Infrastructure",
-        "projectPath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Infrastructure\\LabCourse1.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary_admin_edit_delete_patched_v2\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Infrastructure\\LabCourse1.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary_admin_edit_delete_patched_v2\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -191,8 +191,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Core\\LabCourse1.Core.csproj": {
-                "projectPath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Core\\LabCourse1.Core.csproj"
+              "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary_admin_edit_delete_patched_v2\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Core\\LabCourse1.Core.csproj": {
+                "projectPath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\BookLibrary_admin_edit_delete_patched_v2\\BookLibrary\\LabCourse1.Backend\\LabCourse1.Core\\LabCourse1.Core.csproj"
               }
             }
           }
