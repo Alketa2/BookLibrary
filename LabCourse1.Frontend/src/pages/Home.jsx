@@ -17,7 +17,7 @@ export default function Home() {
       try {
         setLoading(true)
         setError('')
-        // pull all books and just show the first 12 as “picks”
+       
         const { data } = await api.get('/books')
         const list = Array.isArray(data) ? data : (Array.isArray(data?.items) ? data.items : [])
         if (mounted) setBooks(list.slice(0, 12))
