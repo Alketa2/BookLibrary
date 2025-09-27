@@ -1,0 +1,22 @@
+# VS / .NET
+.vs/
+bin/
+obj/
+**/bin/
+**/obj/
+
+# Node/React
+node_modules/
+dist/
+build/
+LabCourse1.Frontend/node_modules/
+LabCourse1.Frontend/.vite/
+LabCourse1.Frontend/dist/
+LabCourse1.Frontend/build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
